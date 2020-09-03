@@ -47,7 +47,7 @@ def reanalyze(article_text):
     print(f'Accuracy: {rounded_score}')
 
     result = 'reliable content' if y_pred_new[0] == 'REAL' else 'unreliable content'
-    str = f'Brrrrr, calculating... There is a good chance that this is {result}.'
+    str = f'Brrrrr, calculating... There is a good chance that this is **{result}**.'
     save_pickle(pac, tfidf_vectorizer)
 
     return str
